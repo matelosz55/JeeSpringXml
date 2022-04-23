@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="emailService" class="ex3.EmailService">
+    </bean>
+
+    <bean name="smsService" class="ex3.SmsService">
+    </bean>
+
+    <bean name="emailSender" class="ex3.MessageSender">
+        <constructor-arg ref="emailService"/>
+    </bean>
+
+    <bean name="smsSender" class="ex3.MessageSender">
+        <constructor-arg ref="smsService"/>
+    </bean>
+
+</beans>

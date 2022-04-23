@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id = "myHelloWorld" class="pl.coderslab.spring.HelloWorld">
+        <constructor-arg value="Roman"/>
+    </bean>
+
+    <bean id = "davidHello" class="pl.coderslab.spring.HelloWorld">
+        <constructor-arg value="David"/>
+    </bean>
+
+    <bean name="zad2HelloWorld" class="ex2.HelloWorld">
+        <constructor-arg value="Hello world"/>
+    </bean>
+
+    <bean id="message" class="ex3.MessageSender">
+        <constructor-arg value="Works."/>
+    </bean>
+
+    <bean id="emailService" class="ex3.EmailService">
+        <constructor-arg value="Email sent"/>
+    </bean>
+
+
+</beans>
